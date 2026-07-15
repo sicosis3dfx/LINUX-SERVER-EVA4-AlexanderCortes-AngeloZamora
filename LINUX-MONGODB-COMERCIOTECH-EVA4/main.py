@@ -26,7 +26,7 @@ load_dotenv()
 # Parámetros discretos cargados de manera proactiva para evitar hardcoding
 MONGO_USER = quote_plus(os.getenv("MONGO_USER", "appComercio"))
 MONGO_PASSWORD = quote_plus(os.getenv("MONGO_PASSWORD", "ClaveSegura123."))
-MONGO_HOST = os.getenv("MONGO_HOST", "ec2-54-82-115-133.compute-1.amazonaws.com")
+MONGO_HOST = os.getenv("MONGO_HOST", "ec2-54-144-87-228.compute-1.amazonaws.com")
 MONGO_PORT = os.getenv("MONGO_PORT", "27017")
 MONGO_DB = os.getenv("MONGO_DB", "comerciotech")
 MONGO_AUTH_SOURCE = os.getenv("MONGO_AUTH_SOURCE", "comerciotech")
@@ -111,6 +111,14 @@ def inicializar_base_de_datos() -> None:
             "fecha_registro": "2026-07-14T12:00:00Z",
             "direccion": "Av. Costanera 4321, Santiago",
             "telefono": "+56 9 1111 2222"
+        },
+        {
+            "_id": 4,
+            "nombre": "Alexander Cortés",
+            "email": "alexander.cortes@comerciotech.cl",
+            "fecha_registro": "2026-07-14T12:00:00Z",
+            "direccion": "Av. Batuco 4111, Santiago",
+            "telefono": "+56 9 5481 9624"
         }
     ])
 
